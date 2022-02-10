@@ -2,7 +2,9 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GameManager {
+ 
+    
     @IBOutlet weak var ScoreLabel: UILabel!
     
     @IBOutlet weak var LivesLabel: UILabel!
@@ -83,4 +85,18 @@ class GameViewController: UIViewController {
             view.ignoresSiblingOrder = true
         }
     }
+    
+    func PresentStartScene()
+    {
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+    }
+    
+    func PresentEndScene()
+    {
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+        SetScene(sceneName: "EndScene")
+    }
+    
 }

@@ -1,10 +1,3 @@
-//
-//  GameViewController.swift
-//  MAPD724-W2022-ICE1
-//
-//  Created by Tom Tsiliopoulos on 2022-01-12.
-//
-
 import UIKit
 import SpriteKit
 import GameplayKit
@@ -13,6 +6,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var ScoreLabel: UILabel!
     
     @IBOutlet weak var LivesLabel: UILabel!
+    
+    var currentScene: SKScene?
+    
     
     
     override func viewDidLoad()
@@ -66,5 +62,25 @@ class GameViewController: UIViewController {
     func updateLivesLabel() -> Void
     {
         LivesLabel.text = "Lives: \(ScoreManager.Lives)"
+    }
+    
+    func SetScene(sceneName: String) -> Void
+    {
+        if let view = self.view as! SKView?
+        {
+            //load the skscene
+            currentScene = SKScene(fileNamed: sceneName)
+            
+            if let scene = SKScene(fileNamed: sceneName)
+            {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .aspectFill
+                
+                // Present the scene
+                view.presentScene(scene)
+            }
+            
+            view.ignoresSiblingOrder = true
+        }
     }
 }

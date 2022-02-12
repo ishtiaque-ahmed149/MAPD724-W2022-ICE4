@@ -1,3 +1,10 @@
+//
+//  GameScene.swift
+//  MAPD724-W2022-ICE4
+//
+//  Created by Ishtiaque Ahmed on 2/9/22.
+//
+
 import SpriteKit
 import UIKit
 

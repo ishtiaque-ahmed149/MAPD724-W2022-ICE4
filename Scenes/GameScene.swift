@@ -1,3 +1,10 @@
+//
+//  GameScene.swift
+//  MAPD724-W2022-ICE4
+//
+//  Created by Ishtiaque Ahmed on 2/9/22.
+//
+
 import UIKit
 import AVFoundation
 import SpriteKit
@@ -9,8 +16,8 @@ var screenHeight: CGFloat?
 
 class GameScene: SKScene
 {
+    var gameManager: GameManager?
     
-    var GameManager
     // instance variables
     var ocean: Ocean?
     var island: Island?
@@ -118,5 +125,10 @@ class GameScene: SKScene
         }
         
         CollisionManager.SquaredRadiusCheck(scene: self, object1: plane!, object2: island!)
+        
+        if(ScoreManager.Lives < 1)
+        {
+            gameManager?.PresentEndScene()
+        }
     }
 }

@@ -10,6 +10,8 @@
 		A3EB9ADA27B49329008696BB /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB9AD927B49329008696BB /* GameManager.swift */; };
 		A3EB9ADC27B4972A008696BB /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3EB9ADB27B4972A008696BB /* StartScene.sks */; };
 		A3EB9ADE27B4979C008696BB /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB9ADD27B4979C008696BB /* StartScene.swift */; };
+		A3EB9AE127B499FE008696BB /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB9AE027B499FE008696BB /* EndScene.swift */; };
+		A3EB9AE327B49A6A008696BB /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3EB9AE227B49A6A008696BB /* EndScene.sks */; };
 		E9222973278FAAC600353E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9222972278FAAC600353E41 /* AppDelegate.swift */; };
 		E9222975278FAAC600353E41 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E9222974278FAAC600353E41 /* GameScene.sks */; };
 		E9222977278FAAC600353E41 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E9222976278FAAC600353E41 /* Actions.sks */; };
@@ -87,6 +89,8 @@
 		A3EB9AD927B49329008696BB /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		A3EB9ADB27B4972A008696BB /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		A3EB9ADD27B4979C008696BB /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		A3EB9AE027B499FE008696BB /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
+		A3EB9AE227B49A6A008696BB /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
 		E922296F278FAAC600353E41 /* MAPD724-W2022-ICE4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2022-ICE4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9222972278FAAC600353E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9222974278FAAC600353E41 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				E9222974278FAAC600353E41 /* GameScene.sks */,
 				E9222976278FAAC600353E41 /* Actions.sks */,
 				E9222978278FAAC600353E41 /* GameScene.swift */,
+				A3EB9AE027B499FE008696BB /* EndScene.swift */,
+				A3EB9AE227B49A6A008696BB /* EndScene.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				E92229E42798DE6D00353E41 /* explosion2.png in Resources */,
 				E9222A1127AB5D5C00353E41 /* yay.mp3 in Resources */,
 				E92229CA2798DE6D00353E41 /* island.png in Resources */,
+				A3EB9AE327B49A6A008696BB /* EndScene.sks in Resources */,
 				E92229DD2798DE6D00353E41 /* smallexplosion3.png in Resources */,
 				E92229E92798DE6D00353E41 /* startButton.png in Resources */,
 				E92229F72798DE6D00353E41 /* dock51.woff in Resources */,
@@ -478,6 +485,7 @@
 				E9222A0727A2163200353E41 /* Island.swift in Sources */,
 				E9222979278FAAC600353E41 /* GameScene.swift in Sources */,
 				E922297B278FAAC600353E41 /* GameViewController.swift in Sources */,
+				A3EB9AE127B499FE008696BB /* EndScene.swift in Sources */,
 				A3EB9ADE27B4979C008696BB /* StartScene.swift in Sources */,
 				E9222A032798EBFA00353E41 /* Ocean.swift in Sources */,
 				E9222973278FAAC600353E41 /* AppDelegate.swift in Sources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,33 +11,51 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="MAPD724_W2022_ICE3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="MAPD724_W2022_ICE4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LivesLabel: 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-K5-yQW">
-                                <rect key="frame" x="20" y="44" width="137" height="45"/>
+                                <rect key="frame" x="20" y="44" width="137" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="dsG-hc-xQT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScoreLabel: 99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HO-v2-hEO">
-                                <rect key="frame" x="192" y="44" width="182" height="45"/>
+                                <rect key="frame" x="226" y="44" width="182" height="127"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghy-5O-3Cp" userLabel="Start Button">
+                                <rect key="frame" x="113" y="426" width="202" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="startButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nd-cD-8pu" userLabel="End Button">
+                                <rect key="frame" x="113" y="554" width="230" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="restartButton" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstItem="GFs-K5-yQW" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="2wz-St-Gio"/>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="GFs-K5-yQW" secondAttribute="bottom" constant="721" id="H2I-Wb-7TE"/>
-                            <constraint firstItem="6HO-v2-hEO" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="IhY-TT-aF8"/>
-                            <constraint firstItem="GFs-K5-yQW" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="Jrx-Rd-LlN"/>
-                            <constraint firstItem="GFs-K5-yQW" firstAttribute="firstBaseline" secondItem="6HO-v2-hEO" secondAttribute="firstBaseline" id="eHQ-5M-jpv"/>
-                            <constraint firstItem="GFs-K5-yQW" firstAttribute="baseline" secondItem="6HO-v2-hEO" secondAttribute="baseline" id="nNv-Nh-bnm"/>
+                            <constraint firstItem="ghy-5O-3Cp" firstAttribute="leading" secondItem="1nd-cD-8pu" secondAttribute="leading" id="0wV-c9-dYe"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="baseline" secondItem="6HO-v2-hEO" secondAttribute="baseline" id="33d-Ti-cYT"/>
+                            <constraint firstItem="1nd-cD-8pu" firstAttribute="top" secondItem="ghy-5O-3Cp" secondAttribute="bottom" constant="54" id="4w8-ra-hMW"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="firstBaseline" secondItem="6HO-v2-hEO" secondAttribute="firstBaseline" id="5QZ-HN-xPg"/>
+                            <constraint firstItem="6HO-v2-hEO" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="7oM-Wg-715"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="8er-Sj-iKa"/>
+                            <constraint firstItem="ghy-5O-3Cp" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="JrN-Tj-e9p"/>
+                            <constraint firstItem="ghy-5O-3Cp" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="c0x-AT-TWh"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="1nd-cD-8pu" secondAttribute="bottom" constant="264" id="gYn-kL-gnR"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="hFy-4T-cCh"/>
+                            <constraint firstItem="ghy-5O-3Cp" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="113" id="hoP-SH-lcC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -47,10 +65,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.30769230769231" y="85.308056872037909"/>
+            <point key="canvasLocation" x="112.14953271028037" y="84.881209503239745"/>
         </scene>
     </scenes>
     <resources>
+        <image name="restartButton" width="200" height="60"/>
+        <image name="startButton" width="200" height="60"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

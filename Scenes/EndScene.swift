@@ -1,5 +1,5 @@
 //
-//  StartScene.swift
+//  EndScene.swift
 //  MAPD724-W2022-ICE4
 //
 //  Created by Ishtiaque Ahmed on 2/9/22.
@@ -8,23 +8,22 @@
 import SpriteKit
 import GameplayKit
 
-class StartScene: SKScene
+class EndScene: SKScene
 {
-    //instance-variables
+    // Istance Variables
     var ocean: Ocean?
-    
     
     override func didMove(to view: SKView)
     {
         screenWidth = frame.width
         screenHeight = frame.height
         
-        name = "START"
+        name = "END"
         
-        //add ocean to the scene
-        ocean = Ocean() //allocate memory
+        // add ocean to the scene
+        ocean = Ocean() // allocate memory
         ocean?.position = CGPoint(x: 0, y: 773)
-        addChild(ocean!) //add the ocean to the scene
+        addChild(ocean!) // add the ocean to the scene
     }
     
     func touchDown(atPoint pos : CGPoint)

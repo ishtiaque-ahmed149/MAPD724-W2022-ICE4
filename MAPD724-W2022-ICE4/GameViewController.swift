@@ -1,43 +1,45 @@
+//
+//  GameViewController.swift
+//  MAPD724-W2022-ICE1
+//
+//  Created by Ishtiaque Ahmed on 2022-01-12.
+//
+
 import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController, GameManager {
- 
+class GameViewController: UIViewController, GameManager
+{
     
+    // Button Outlets
+    @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var EndButton: UIButton!
+    
+    // Label Outlets
     @IBOutlet weak var ScoreLabel: UILabel!
-    
     @IBOutlet weak var LivesLabel: UILabel!
+    @IBOutlet weak var StartLabel: UILabel!
+    @IBOutlet weak var EndLabel: UILabel!
     
     var currentScene: SKScene?
-    
-    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        if let view = self.view as! SKView?
-        {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene")
-            {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-        }
-        
+               
         // Initialize the Lives and Score
+        LivesLabel.isHidden = true
+        ScoreLabel.isHidden = true
+        EndLabel.isHidden = true
+        EndButton.isHidden = true
+        
         CollisionManager.gameViewController = self
-        ScoreManager.Score = 0
-        ScoreManager.Lives = 5
-        updateLivesLabel()
-        updateScoreLabel()
+        
+        SetScene(sceneName: "StartScene")
+        
+        
     }
 
     override var shouldAutorotate: Bool {
@@ -70,17 +72,20 @@ class GameViewController: UIViewController, GameManager {
     {
         if let view = self.view as! SKView?
         {
-            //load the skscene
+            
+            // Load the SKScene - store a reference in currentScene
             currentScene = SKScene(fileNamed: sceneName)
             
-            if let scene = SKScene(fileNamed: sceneName)
+            if let gameScene = currentScene as? GameScene
             {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
+                gameScene.gameManager = self
             }
+            
+            // Set the scale mode to scale to fit the window
+            currentScene?.scaleMode = .aspectFill
+            
+            // Present the scene
+            view.presentScene(currentScene)
             
             view.ignoresSiblingOrder = true
         }
@@ -88,15 +93,46 @@ class GameViewController: UIViewController, GameManager {
     
     func PresentStartScene()
     {
+        StartButton.isHidden = false
+        StartLabel.isHidden = false
         ScoreLabel.isHidden = true
         LivesLabel.isHidden = true
     }
     
     func PresentEndScene()
     {
+        EndButton.isHidden = false
+        EndLabel.isHidden = false
         ScoreLabel.isHidden = true
         LivesLabel.isHidden = true
         SetScene(sceneName: "EndScene")
     }
     
+    
+    @IBAction func StartButton_Pressed(_ sender: UIButton)
+    {
+        StartButton.isHidden = true
+        StartLabel.isHidden = true
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        SetScene(sceneName: "GameScene")
+    }
+    
+    @IBAction func EndButton_Pressed(_ sender: UIButton)
+    {
+        EndButton.isHidden = true
+        EndLabel.isHidden = true
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        SetScene(sceneName: "GameScene")
+        
+    }
 }
